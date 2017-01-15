@@ -64,7 +64,7 @@ class Graph
     }
     // Assigns colors (starting from 0) to all vertices and
     // prints the assignment of colors
-    void greedyColoring()
+    int[] greedyColoring()
     {
         int result[] = new int[V];
  
@@ -115,8 +115,6 @@ class Graph
         }
  
         // print the result
-        for (int u = 0; u < V; u++)
-            System.out.println("Vertex " + u + " --->  Color "
-                                + result[u]);
+        return result;
     }
 }

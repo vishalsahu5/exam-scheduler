@@ -1,5 +1,7 @@
 package examscheduler;
 import examscheduler.Graph;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 /**
  *
  * @author Sarthak Sahu
@@ -205,11 +207,12 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jCheckBox15)
                             .addComponent(jCheckBox14)
                             .addComponent(jCheckBox13)
-                            .addComponent(jCheckBox12)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(292, 292, 292)
-                        .addComponent(jLabel2)))
+                            .addComponent(jCheckBox12))))
                 .addContainerGap(246, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(292, 292, 292)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,7 +249,8 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jCheckBox11)
                     .addComponent(jCheckBox17))
                 .addGap(81, 81, 81)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13))
         );
 
         jButton1.setText("Generate");
@@ -283,7 +287,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(112, 112, 112)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
@@ -295,7 +299,8 @@ public class GUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        g.greedyColoring();
+        dispose();
+        new Schedule(g.greedyColoring());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
@@ -531,6 +536,29 @@ public class GUI extends javax.swing.JFrame {
             }
         }
         g.printAll();
+        
+        jCheckBox1.setSelected(false);
+        jCheckBox2.setSelected(false);
+        jCheckBox3.setSelected(false);
+        jCheckBox4.setSelected(false);
+        jCheckBox5.setSelected(false);
+        jCheckBox6.setSelected(false);
+        jCheckBox7.setSelected(false);
+        jCheckBox8.setSelected(false);
+        jCheckBox9.setSelected(false);
+        jCheckBox10.setSelected(false);
+        jCheckBox11.setSelected(false);
+        jCheckBox12.setSelected(false);
+        jCheckBox13.setSelected(false);
+        jCheckBox14.setSelected(false);
+        jCheckBox15.setSelected(false);
+        jCheckBox16.setSelected(false);
+        jCheckBox17.setSelected(false); 
+        for(int i=0; i<17; i++)
+            subjects[i] = 0;
+            
+        countChecked = 0;
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
