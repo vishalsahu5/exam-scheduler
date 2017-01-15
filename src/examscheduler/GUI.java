@@ -535,7 +535,6 @@ public class GUI extends javax.swing.JFrame {
                     g.addEdge(i, j);
             }
         }
-        g.printAll();
         
         jCheckBox1.setSelected(false);
         jCheckBox2.setSelected(false);
@@ -554,11 +553,12 @@ public class GUI extends javax.swing.JFrame {
         jCheckBox15.setSelected(false);
         jCheckBox16.setSelected(false);
         jCheckBox17.setSelected(false); 
+        
         for(int i=0; i<17; i++)
             subjects[i] = 0;
             
         countChecked = 0;
-        
+        jLabel2.setText("0");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
